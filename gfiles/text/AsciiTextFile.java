@@ -77,6 +77,15 @@ public class AsciiTextFile extends VirtualFile {
 	public char readCharAt(int i) {
 		return (char) readAt(i);
 	}
+	
+	/**
+	 * used to get the string representation of the ascii text file
+	 * @return character sequence version of the file
+	 * @since Apr 11, 2017
+	 */
+	public CharSequence getCharacterSequence(){
+		return new AsciiTextFileSequence(0, this.getBytes(), this);
+	}
 
 	/**
 	 * loads a text file using the ascii formatting and returns a new ascii text

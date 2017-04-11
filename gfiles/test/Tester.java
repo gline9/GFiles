@@ -9,7 +9,6 @@ import gfiles.text.xml.XMLFileReader;
 
 public class Tester {
 	public static void main(String[] args) {
-
 		try {
 			XMLFile xml = new XMLFile(VirtualFile.load(new File("I:/test.xml")));
 
